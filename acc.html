@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Account Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="bg-red-700 text-white flex items-center justify-between px-4 py-3 shadow-md">
+    <div class="flex items-center space-x-2">
+      <img src="../img/wells.svg" alt="Bank Logo" class="w-8 h-8">
+      <h1 class="text-lg font-bold">WELLS FARGO</h1>
+    </div>
+    <div>
+      <img src="../img/flo.png" alt="Profile" class="w-9 h-9 rounded-full border border-white">
+    </div>
+  </header>
+
+  <!-- Search / Title -->
+  <section class="p-4">
+    <select class="w-full border border-gray-300 rounded-md p-2 text-gray-700">
+      <option>Business and Personal Accounts</option>
+      <option>Personal Accounts</option>
+      <option>Business Accounts</option>
+    </select>
+  </section>
+
+  <!-- Account List -->
+  <main class="p-4 space-y-6">
+    <!-- Account Card -->
+    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+      <h2 class="text-sm text-red-800 font-semibold">BUSINESS CHECKING</h2>
+      <p class="text-2xl font-bold text-gray-800">$250,221.40</p>
+      <p class="text-sm text-gray-500">Available balance</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+      <h2 class="text-sm text-red-800 font-semibold">BUSINESS MARKET RATE SAVINGS</h2>
+      <p class="text-2xl font-bold text-gray-800">$822,250.08</p>
+      <p class="text-sm text-gray-500">Available balance</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+      <h2 class="text-sm text-red-800 font-semibold">CHECKING</h2>
+      <p class="text-2xl font-bold text-gray-800">$2,844,824.33</p>
+      <p class="text-sm text-gray-500">Available balance</p>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+      <h2 class="text-sm text-red-800 font-semibold">Crown Classic</h2>
+      <p class="text-2xl font-bold text-gray-800">$250,844.57</p>
+      <p class="text-sm text-gray-500">Available balance</p>
+    </div>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex justify-around py-2">
+    <button class="text-red-700 font-semibold">Accounts</button>
+    <button class="text-gray-500">Transfer</button>
+    <button class="text-gray-500">Zelle</button>
+    <button class="text-gray-500">Deposit</button>
+    <button class="text-gray-500">Menu</button>
+  </footer>
+
+</body>
+</html>
