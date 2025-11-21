@@ -2,58 +2,125 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Basic Calculator</title>
-  <style>
-    :root{
-      --bg:#0f1724; --panel:#0b1220; --accent:#7c5cff; --muted:#9aa4b2;
-      --btn:#111827; --btn-hover:#1f2937; --glass: rgba(255,255,255,0.04);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#071022 0%, #0b1020 100%);
-      color:#ecf0f3; padding:24px;
-    }.calculator{
-  width:360px; max-width:100%; background:linear-gradient(180deg,var(--panel), #071126);
-  border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(2,6,23,0.6);
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Basic Calculator</title>
+<style>
+:root{
+--bg:#c9ccd1;
+--panel:#0b1220;
+--accent:#7c5cff;
+--muted:#9aa4b2;
+--btn:#111827;
+--btn-hover:#1f2937;
+--glass: rgba(255,255,255,0.04);
+}
+*{
+  box-sizing:border-box
+}
+html,body{
+  height:100%
+}
+body{
+  margin:0;
+  font-family:Inter,system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  display:flex;
+  align-items:center;
+  justify-content:center; 
+  background:linear-gradient(180deg,#071022 0%, #0b1020 100%);
+  color:#ecf0f3; 
+  padding:24px;
+}
+.calculator{
+  width:360px; 
+  max-width:100%; 
+  background:linear-gradient(180deg,var(--panel), #071126);
+  border-radius:14px; 
+  padding:18px; 
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
   border:1px solid rgba(255,255,255,0.03);
 }
 
 .screen{
-  background:var(--glass); padding:16px; border-radius:10px; margin-bottom:12px; position:relative;
+  background:var(--glass); 
+  padding:16px; 
+  border-radius:10px; 
+  margin-bottom:12px; 
+  position:relative;
   backdrop-filter: blur(6px);
 }
 
 .expression{
-  font-size:18px; color:var(--muted); min-height:20px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-size:18px; 
+  color:var(--muted); 
+  min-height:20px; 
+  overflow:hidden; 
+  text-overflow:ellipsis; 
+  white-space:nowrap;
 }
 .result{
-  font-size:28px; font-weight:600; text-align:right; letter-spacing:0.6px; margin-top:6px; overflow:hidden; white-space:nowrap;
+  font-size:28px; 
+  font-weight:600; 
+  text-align:right; 
+  letter-spacing:0.6px; 
+  margin-top:6px; 
+  overflow:hidden; 
+  white-space:nowrap;
 }
 
 .buttons{
-  display:grid; grid-template-columns:repeat(4,1fr); gap:10px;
+  display:grid; 
+  grid-template-columns:repeat(4,1fr); 
+  gap:10px;
 }
 
 button.key{
-  height:56px; border-radius:10px; border:0; background:var(--btn); color:#e6eef8; font-size:18px; font-weight:600;
-  box-shadow: 0 3px 0 rgba(2,6,23,0.6); cursor:pointer; transition:transform .06s ease, background .12s ease, box-shadow .06s ease;
+  height:56px; 
+  border-radius:10px; 
+  border:0; 
+  background:var(--btn); 
+  color:#e6eef8; 
+  font-size:18px; 
+  font-weight:600;
+  box-shadow: 0 3px 0 rgba(2,6,23,0.6); 
+  cursor:pointer; 
+  transition:transform .06s ease, 
+  background .12s ease, box-shadow .06s ease;
 }
-button.key:active{transform:translateY(2px)}
-button.key:hover{background:var(--btn-hover)}
+button.key:active{
+  transform:translateY(2px)
+}
+button.key:hover{
+  background:var(--btn-hover)
+}
 
-button.op{ background: linear-gradient(180deg,var(--accent), #5b3bff); color:white }
-button.clear{ background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.03)}
+button.op{ 
+  background: linear-gradient(180deg,var(--accent), #5b3bff); 
+  color:white 
+}
+button.clear{ 
+  background:transparent; 
+  color:var(--muted); 
+  border:1px solid rgba(255,255,255,0.03)
+}
 #clears{
   background-color: red ;
 }
-.span-2{ grid-column: span 2 }
-.footer{ margin-top:12px; text-align:center; color:var(--muted); font-size:13px }
+.span-2{ 
+  grid-column: span 2 
+}
+.footer{ 
+  margin-top:12px; 
+  text-align:center; 
+  color:var(--muted); 
+  font-size:13px 
+}
 
-@media (max-width:420px){ .calculator{padding:12px} button.key{height:50px} .result{font-size:24px} }
+@media (max-width:420px){ 
+  .calculator{padding:12px} 
+  button.key{height:50px} 
+  .result{font-size:24px} 
+}
 
   </style>
 </head>
