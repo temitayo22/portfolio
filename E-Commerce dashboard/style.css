@@ -1,0 +1,253 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Variables for theming (No Gradients) */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --background-color: #f4f7f9;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --sidebar-width: 250px;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ------------------------------------ */
+/* 1. DASHBOARD LAYOUT (GRID)           */
+/* ------------------------------------ */
+
+.dashboard-container {
+    display: grid;
+    /* Desktop layout: Sidebar + Main Content */
+    grid-template-columns: var(--sidebar-width) 1fr;
+    min-height: 100vh;
+}
+
+/* ------------------------------------ */
+/* 2. SIDEBAR STYLES                    */
+/* ------------------------------------ */
+
+.sidebar {
+    background-color: var(--card-background);
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: var(--primary-color);
+    color: var(--card-background);
+}
+
+.nav-item .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* ------------------------------------ */
+/* 3. MAIN CONTENT & HEADER             */
+/* ------------------------------------ */
+
+.main-content {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-btn {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ------------------------------------ */
+/* 4. CARD STYLES (General)             */
+/* ------------------------------------ */
+
+.card {
+    background-color: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ------------------------------------ */
+/* 5. METRIC CARDS (FLEX/GRID)          */
+/* ------------------------------------ */
+
+.metric-cards {
+    display: grid;
+    /* 3 columns on desktop, responsive down to 1 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.metric-card {
+    text-align: center;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.metric-title {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.change-indicator {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.change-indicator.success {
+    color: var(--success-color);
+}
+
+.change-indicator.danger {
+    color: var(--danger-color);
+}
+
+
+/* ------------------------------------ */
+/* 6. CHARTS LAYOUT                     */
+/* ------------------------------------ */
+
+.charts-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.chart-card {
+    flex: 1; /* Both charts take equal width */
+    min-width: 0; /* Allows flex items to shrink properly */
+}
+
+/* ------------------------------------ */
+/* 7. TABLE STYLES                      */
+/* ------------------------------------ */
+
+.recent-orders table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.recent-orders th, .recent-orders td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.recent-orders th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+/* Status Badges */
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.status.delivered {
+    background-color: #e6f7ed;
+    color: var(--success-color);
+}
+.status.processing {
+    background-color: #fff3e6;
+    color: #ffc107;
+}
+.status.cancelled {
+    background-color: #fbe6e6;
+    color: var(--danger-color);
+}
+
+/* ------------------------------------ */
+/* 8. MOBILE RESPONSIVENESS (Media Query) */
+/* ------------------------------------ */
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        /* On mobile, stack the content, remove the fixed sidebar grid */
+        grid-template-columns: 1fr;
+    }
+
+    /* Show menu button on mobile */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Hide sidebar by default on mobile */
+    .sidebar {
+        position: fixed;
+        left: calc(var(--sidebar-width) * -1); /* Off screen */
+        top: 0;
+        height: 100vh;
+        z-index: 100;
+        transition: left 0.3s ease-in-out;
+    }
+
+    /* Class added by JS to show sidebar */
+    .sidebar.show {
+        left: 0;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .charts-container {
+        /* Charts stack vertically on mobile */
+        flex-direction: column;
+    }
+}

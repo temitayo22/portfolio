@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">Dashboard</div>
+            <nav>
+                <a href="#" class="nav-item active">
+                    <span class="icon">🏠</span> Home
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">📦</span> Products
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">👤</span> Customers
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">📈</span> Analytics
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h2>Overview</h2>
+                <button id="menu-btn" class="menu-btn">☰</button>
+            </header>
+
+            <section class="metric-cards">
+                <div class="card metric-card">
+                    <div class="card-icon">💰</div>
+                    <p class="metric-title">Total Sales</p>
+                    <p class="metric-value" id="total-sales">$12,450</p>
+                    <small class="change-indicator success">+8.5%</small>
+                </div>
+                
+                <div class="card metric-card">
+                    <div class="card-icon">🛒</div>
+                    <p class="metric-title">New Orders</p>
+                    <p class="metric-value" id="new-orders">285</p>
+                    <small class="change-indicator danger">-1.2%</small>
+                </div>
+                
+                <div class="card metric-card">
+                    <div class="card-icon">👥</div>
+                    <p class="metric-title">New Customers</p>
+                    <p class="metric-value" id="new-customers">75</p>
+                    <small class="change-indicator success">+5.0%</small>
+                </div>
+            </section>
+            
+            <section class="charts-container">
+                <div class="card chart-card">
+                    <h3>Revenue Trend (Line Chart)</h3>
+                    <canvas id="revenueChart"></canvas>
+                </div>
+                <div class="card chart-card">
+                    <h3>Product Sales (Doughnut Chart)</h3>
+                    <canvas id="productChart"></canvas>
+                </div>
+            </section>
+
+            <section class="recent-orders">
+                <div class="card">
+                    <h3>Recent Orders</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Product Name</th>
+                                <th>Customer</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#987</td>
+                                <td>Laptop Pro</td>
+                                <td>Alice J.</td>
+                                <td class="status processing">Processing</td>
+                            </tr>
+                            <tr>
+                                <td>#986</td>
+                                <td>Wireless Mouse</td>
+                                <td>Bob K.</td>
+                                <td class="status delivered">Delivered</td>
+                            </tr>
+                            <tr>
+                                <td>#985</td>
+                                <td>Mechanical Keyb.</td>
+                                <td>Charlie T.</td>
+                                <td class="status cancelled">Cancelled</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
