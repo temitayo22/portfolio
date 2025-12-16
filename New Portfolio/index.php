@@ -134,8 +134,8 @@
                         <span>HTML</span><span>CSS</span><span>JS</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-link"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://temitayo22.github.io/portfolio/E-Commerce%20dashboard/"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://github.com/temitayo22/portfolio/blob/cf1d3b180493808d73e2116e2352a3b15ca8d52d/E-Commerce%20dashboard/index.html"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
             </div>
@@ -151,8 +151,8 @@
                         <span>HTML</span><span>CSS</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-link"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://temitayo22.github.io/portfolio/MyPortfolio/"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://github.com/temitayo22/portfolio/blob/cf1d3b180493808d73e2116e2352a3b15ca8d52d/MyPortfolio/index.html"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
             </div>
@@ -168,8 +168,8 @@
                         <span>JavaScript</span><span>DOM</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-link"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://temitayo22.github.io/portfolio/To-Do%20List/"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://github.com/temitayo22/portfolio/blob/cf1d3b180493808d73e2116e2352a3b15ca8d52d/To-Do%20List/index.html"><i class="fab fa-github"></i> Code</a>
                     </div>
                 </div>
             </div>
