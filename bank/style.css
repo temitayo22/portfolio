@@ -1,0 +1,142 @@
+/* General Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0e2d7;
+    margin: 0;
+    color: #333;
+}
+
+.app-container {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #f3eabf;
+    min-height: 100vh;
+}
+
+/* Header */
+.main-header {
+    background-color: #d11212;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.main-header h1 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.sign-out {
+    font-size: 0.8rem;
+}
+
+/* Greeting */
+.user-greeting {
+    padding: 20px 15px;
+    background-color: #f3eabf;
+}
+
+.user-greeting h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.user-greeting p {
+    margin: 5px 0 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Buttons */
+.action-bar {
+    display: flex;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #ebe8e6;
+}
+
+.action-bar button {
+    flex: 1;
+    padding: 8px 0;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    color: #444;
+}
+
+/* Account Cards */
+.section-label {
+    background-color: #f7f3f0;
+    padding: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #555;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.account-card, .add-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.account-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bank-logo {
+    width: 30px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+.bank-logo.red { 
+    background-image: url(./newimg/BAC.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center ;
+}
+    
+.bank-logo.blue {  background-image: url(./newimg/Merrill-Emblem.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ; }
+
+.account-name {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.balance {
+    margin: 2px 0 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.chevron {
+    color: #ccc;
+    font-weight: bold;
+}
+
+/* Footer */
+.legal-footer {
+    padding: 20px 15px;
+    font-size: 0.75rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+.legal-footer ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
